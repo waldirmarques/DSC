@@ -1,7 +1,5 @@
 package br.com.laboratorio.diciplina;
 
-import br.com.laboratorio.diciplina.Disciplina;
-import br.com.laboratorio.diciplina.DisciplinaDTO;
 import br.com.laboratorio.diciplina.service.DisciplinaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
