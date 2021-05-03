@@ -28,12 +28,12 @@ public class UpdateNotaDisciplinaServiceImpl implements UpdateNotaDisciplinaServ
             notas.add(nota);
             disciplina.setMediaAritmetica(nota.getMedia());
         } else {
+            notas.add(Nota.builder().media(disciplinaDTO.getNota()).build());
             Double soma = 0.0;
             for (Nota nota : notas) {
                 soma += nota.getMedia();
             }
             var media = soma / notas.size();
-            notas.add(Nota.builder().media(media).build());
             disciplina.setMediaAritmetica(media);
         }
         notaRepository.saveAll(notas);

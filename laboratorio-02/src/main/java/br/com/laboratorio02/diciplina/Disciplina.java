@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,7 +29,7 @@ public class Disciplina {
     private String nome;
     private Integer curtidas;
     private Double mediaAritmetica;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Comentario> comentarios = new ArrayList<>();
     @OneToMany
     private List<Nota> notas = new ArrayList<>();

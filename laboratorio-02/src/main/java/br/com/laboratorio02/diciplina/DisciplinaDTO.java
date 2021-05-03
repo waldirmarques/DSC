@@ -17,5 +17,5 @@ public class DisciplinaDTO {
     @Max(value = 10, message = "Nota inválida")
     @PositiveOrZero(message = "Nota não pode ser negativo")
     private Double nota;
-    private String comentarios;
+    private String comentario;
 }
